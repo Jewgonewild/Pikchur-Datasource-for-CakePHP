@@ -5,4 +5,12 @@ http://groups.google.com/group/pikchur-api/web/api-documentation
 
 #Usage
 
-Example coming in a few.
+	<?php
+		class PikchurController extends AppController {
+			function index(){
+				$this->Pikchur = ConnectionManager::getDataSource('pikchur');
+        		$response = $this->Pikchur->authenticate();
+				debug($response);
+				}
+			}
+	?>
